@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Dash.js Rocks</title>
+        <style>
+            video {
+                width: 640px;
+                height: 360px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <video id="videoPlayer" controls></video>
+        </div>
+        <script src="/home/yusuf/Desktop/Sem VII/Computer Networks/Project/http2-vs-http3/js/dash.all.min.js"></script>
+        <script>
+            (function(){
+                // var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd";
+                var url = "/home/yusuf/Desktop/Sem VII/Computer Networks/Project/http2-vs-http3/testfiles/output3.mpd";
+
+                var player = dashjs.MediaPlayer().create();
+                player.initialize(document.querySelector("#videoPlayer"), url, true);
+
+                // var context = new Dash.di.DashContext();
+                // var player = new MediaPlayer(context);
+                //                 player.startup();
+                //                 player.attachView(document.querySelector("#videoplayer"));
+                //                 player.attachSource(url);
+            })();
+        </script>
+    </body>
+</html>
